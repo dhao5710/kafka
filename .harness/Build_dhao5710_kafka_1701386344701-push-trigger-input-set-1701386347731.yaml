@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_dhao5710_kafka_1701386344701-push-trigger-input-set
+  identifier: Build_dhao5710_kafka_1701386344701pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: test
+  pipeline:
+    identifier: Build_dhao5710_kafka_1701386344701
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
