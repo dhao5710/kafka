@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_dhao5710_kafka_1701386344701-pr-trigger-input-set
+  identifier: Build_dhao5710_kafka_1701386344701prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: test
+  pipeline:
+    identifier: Build_dhao5710_kafka_1701386344701
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
