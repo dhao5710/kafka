@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_dhao5710_kafka_1701386344701
+  name: Build kafka
+  orgIdentifier: default
+  projectIdentifier: test
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1701386262500
+        repoName: dhao5710/kafka
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
